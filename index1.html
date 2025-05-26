@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rakesh Kumar Kushwaha | Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.9);
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 2px solid #00e5ff;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #00e5ff;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+      color: #a0f0ff;
+      font-weight: 600;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.85);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 12px 0;
+      border-bottom: 1px solid #00e5ff;
+      gap: 15px;
+    }
+
+    nav a {
+      color: #00e5ff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #00e5ff;
+      color: black;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch; /* stretch children vertically */
+      padding: 30px 20px;
+      gap: 20px;
+    }
+
+    .left-side {
+      flex: 1;
+      max-width: 45%;
+      background: rgba(0, 0, 0, 0.7); /* semi-transparent box for text readability */
+      padding: 20px;
+      border-radius: 12px;
+      color: #ccefff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .left-side h2 {
+      font-size: 2rem;
+      color: #00e5ff;
+      margin-bottom: 15px;
+    }
+
+    .left-side p {
+      font-size: 1.1rem;
+      line-height: 1.4;
+    }
+
+    .right-side {
+      flex: 1;
+      max-width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Image with no box behind, just the PNG itself */
+    .right-side img {
+      height: 100vh;
+      max-height: calc(100vh - 120px); /* leave room for header + footer */
+      width: auto;
+      object-fit: contain;
+      /* No background, border, or shadow */
+    }
+
+    .nav-back {
+      text-align: center;
+      margin: 30px 0 10px;
+    }
+
+    .nav-back a {
+      color: #00e5ff;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid #00e5ff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-back a:hover {
+      background-color: #00e5ff;
+      color: black;
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.9);
+      color: #00e5ff;
+      text-align: center;
+      padding: 15px 10px;
+      border-top: 2px solid #00e5ff;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column;
+      }
+      .right-side {
+        max-width: 100%;
+        margin-top: 30px;
+      }
+      .right-side img {
+        height: auto;
+        max-height: 400px;
+        width: 100%;
+      }
+      .left-side {
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rakesh Kumar Kushwaha</h1>
+    <p>Hard-working IT Student | Ethical Hacker | Public Speaker</p>
+  </header>
+
+  <nav>
+    <a href="AboutMe.html">About</a>
+    <a href="Resume.html">Resume</a>
+    <a href="Projects.html">Projects</a>
+    <a href="Certificates.html">Certificates</a>
+    <a href="Contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <div class="left-side">
+      <h2>Welcome to My Portfolio</h2>
+      <p>Passion fuels progress, and knowledge secures it.</p>
+    </div>
+    <div class="right-side">
+      <img src="portfolioprofile.png" alt="Rakesh Kumar Kushwaha" />
+    </div>
+  </main>
+  
+  <footer>
+    <p>© 2025 Rakesh Kumar Kushwaha. All rights reserved.</p>
+  </footer>
+</body>
+</html>

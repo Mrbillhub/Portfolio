@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niraj Mahato | Cybersecurity Expert & Penetration Tester</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #dc2626;
+            --primary-dark: #b91c1c;
+            --primary-light: #fecaca;
+            --text-dark: #1f2937;
+            --text-light: #f9fafb;
+            --bg-light: #f9fafb;
+            --bg-dark: #111827;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            overflow-x: hidden;
+        }
+        
+        .primary-color {
+            color: var(--primary-color);
+        }
+        
+        .primary-bg {
+            background-color: var(--primary-color);
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+        }
+        
+        .section {
+            padding: 5rem 1rem;
+        }
+        
+        .skill-bar {
+            height: 10px;
+            background-color: #e5e7eb;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background-color: var(--primary-color);
+            border-radius: 5px;
+        }
+
+        .project-card {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline-dot {
+            width: 20px;
+            height: 20px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            position: absolute;
+            left: -10px;
+            top: 5px;
+        }
+        
+        .timeline-line {
+            position: absolute;
+            left: 0;
+            top: 25px;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .nav-link {
+            position: relative;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 80%;
+            left: 10%;
+        }
+
+        /* For PDF optimization */
+        @media print {
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold flex items-center">
+                <span class="primary-color">Niraj</span>&nbsp;Mahato
+            </div>
+            <nav class="hidden md:flex space-x-2">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center pt-16">
+        <div class="container mx-auto px-4 py-20 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-white mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm Niraj Mahato</h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6">Cybersecurity Expert & Penetration Tester</h2>
+                <p class="text-lg mb-8">Protecting digital assets through advanced threat analysis, vulnerability assessments, and robust security solutions</p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="btn-primary">Get in Touch</a>
+                    <a href="#projects" class="border border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-red-600 transition">View Projects</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="rounded-full overflow-hidden border-4 border-white shadow-lg w-64 h-64">
+                    <img src="" alt="" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 pr-0 md:pr-8">
+                    <h3 class="text-2xl font-semibold mb-4">Who am I?</h3>
+                    <p class="mb-4">I'm a dedicated cybersecurity professional with over 8 years of experience in protecting organizations from cyber threats. I specialize in penetration testing, vulnerability assessments, and incident response, helping companies identify and mitigate security risks.</p>
+                    <p class="mb-6">Based in San Francisco, I've worked with Fortune 500 companies and emerging startups to build robust security frameworks and defend against evolving cyber threats.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center bg-gray-100 rounded-full px-4 py-2">
+                            <i class="fas fa-map-marker-alt primary-color mr-2"></i>
+                            <span>San Francisco, CA</span>
+                        </div>
+                        <div class="flex items-center bg-gray-100 rounded-full px-4 py-2">
+                            <i class="fas fa-shield-alt primary-color mr-2"></i>
+                            <span>Security Consultant</span>
+                        </div>
+                        <div class="flex items-center bg-gray-100 rounded-full px-4 py-2">
+                            <i class="fas fa-language primary-color mr-2"></i>
+                            <span>English, Hindi, Nepali</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">Personal Information</h3>
+                        <div class="space-y-3">
+                            <div class="flex">
+                                <div class="w-32 font-medium">Name:</div>
+                                <div>Niraj Mahato</div>
+                            </div>
+                            <div class="flex">
+                                <div class="w-32 font-medium">Email:</div>
+                                <div>niraj.mahato@cybersec.com</div>
+                            </div>
+                            <div class="flex">
+                                <div class="w-32 font-medium">Phone:</div>
+                                <div>(415) 555-8901</div>
+                            </div>
+                            <div class="flex">
+                                <div class="w-32 font-medium">Birthday:</div>
+                                <div>March 22, 1989</div>
+                            </div>
+                            <div class="flex">
+                                <div class="w-32 font-medium">Degree:</div>
+                                <div>MS Cybersecurity</div>
+                            </div>
+                            <div class="flex">
+                                <div class="w-32 font-medium">Experience:</div>
+                                <div>8+ Years</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">My Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-semibold mb-6">Security Skills</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Penetration Testing</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Vulnerability Assessment</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Incident Response</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Threat Intelligence</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Security Architecture</span>
+                                <span>87%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 87%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-6">Technical Tools</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Metasploit</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Nessus</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Wireshark</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Burp Suite</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Splunk</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="project-card">
+                    <div class="relative overflow-hidden pb-60">
+                        <img src="https://cdn1.genspark.ai/user-upload-image/5_generated/0c483254-f87a-4ebf-9d2e-dd35e03b2b20_wm" alt="Security Dashboard" class="absolute w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Enterprise Security Dashboard</h3>
+                        <p class="text-gray-600 mb-4">Comprehensive security monitoring dashboard for enterprise networks, featuring real-time threat detection, vulnerability tracking, and incident response metrics.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">Threat Detection</span>
+                            <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">SIEM</span>
+                            <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">Analytics</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-red-600 hover:text-red-800">
+                            View Case Study
+                            <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="relative overflow-hidden pb-60">
+                        <img src="https://cdn1.genspark.ai/user-upload-image/5_generated/f405c064-6897-409d-9d58-347c066ad2e6_wm" alt="Mobile Security Assessment" class="absolute w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Mobile Banking Security Assessment</h3>
+                        <p class="text-gray-600 mb-4">Comprehensive security assessment of mobile banking application, including penetration testing, code review, and security architecture evaluation.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">Penetration Testing</span>
+                            <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">Mobile Security</span>
+                            <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">FinTech</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-red-600 hover:text-red-800">
+                            View Case Study
+                            <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- More Projects -->
+            <div class="mt-12">
+                <h3 class="text-xl font-semibold mb-6">Other Projects</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                        <h4 class="text-lg font-medium mb-2">Red Team Assessment</h4>
+                        <p class="text-gray-600 mb-3">Multi-phase red team engagement for Fortune 500 company, simulating advanced persistent threats and testing security controls.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-2">
+                                <span class="bg-gray-200 text-gray-700 text-xs font-medium px-2 py-0.5 rounded">Red Team</span>
+                                <span class="bg-gray-200 text-gray-700 text-xs font-medium px-2 py-0.5 rounded">APT Simulation</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                        <h4 class="text-lg font-medium mb-2">Cloud Security Audit</h4>
+                        <p class="text-gray-600 mb-3">Comprehensive security assessment of AWS infrastructure, identifying misconfigurations and compliance gaps.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-2">
+                                <span class="bg-gray-200 text-gray-700 text-xs font-medium px-2 py-0.5 rounded">Cloud Security</span>
+                                <span class="bg-gray-200 text-gray-700 text-xs font-medium px-2 py-0.5 rounded">AWS</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                        <h4 class="text-lg font-medium mb-2">Incident Response Framework</h4>
+                        <p class="text-gray-600 mb-3">Developed comprehensive incident response procedures and playbooks for healthcare organization with 24/7 SOC implementation.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-2">
+                                <span class="bg-gray-200 text-gray-700 text-xs font-medium px-2 py-0.5 rounded">Incident Response</span>
+                                <span class="bg-gray-200 text-gray-700 text-xs font-medium px-2 py-0.5 rounded">SOC</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Work Experience</h2>
+            <div class="relative ml-8 border-l-2 border-red-600 pl-8 space-y-12">
+                <div class="relative">
+                    <div class="timeline-dot"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-semibold">Senior Security Consultant</h3>
+                                <p class="text-gray-600">CyberGuard Solutions</p>
+                            </div>
+                            <div class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full mt-2 md:mt-0">
+                                Jan 2020 - Present
+                            </div>
+                        </div>
+                        <p class="mb-4">Lead security consultant specializing in penetration testing and vulnerability assessments for enterprise clients. Manage a team of 5 security analysts and oversee complex security engagements.</p>
+                        <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                            <li>Conducted 50+ penetration tests resulting in identification of 300+ vulnerabilities</li>
+                            <li>Led red team exercises for Fortune 500 companies with 95% success rate</li>
+                            <li>Developed automated security testing frameworks reducing assessment time by 40%</li>
+                            <li>Provided incident response services for major data breaches affecting 2M+ users</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="timeline-dot"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-semibold">Cybersecurity Analyst</h3>
+                                <p class="text-gray-600">SecureNet Technologies</p>
+                            </div>
+                            <div class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full mt-2 md:mt-0">
+                                Mar 2017 - Dec 2019
+                            </div>
+                        </div>
+                        <p class="mb-4">Responsible for threat monitoring, vulnerability management, and security incident response. Specialized in network security and malware analysis.</p>
+                        <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                            <li>Monitored security events using SIEM tools and identified 200+ security incidents</li>
+                            <li>Performed malware analysis and reverse engineering of 150+ samples</li>
+                            <li>Developed custom security scripts and tools for threat detection</li>
+                            <li>Conducted security awareness training for 500+ employees</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="timeline-dot"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-semibold">Junior Security Specialist</h3>
+                                <p class="text-gray-600">TechSecure Corp</p>
+                            </div>
+                            <div class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full mt-2 md:mt-0">
+                                Jun 2015 - Feb 2017
+                            </div>
+                        </div>
+                        <p class="mb-4">Entry-level position focusing on vulnerability scanning, security assessments, and compliance auditing across various industry sectors.</p>
+                        <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                            <li>Performed vulnerability scans and assessments for 30+ client environments</li>
+                            <li>Assisted in PCI DSS and SOX compliance audits</li>
+                            <li>Created security documentation and risk assessment reports</li>
+                            <li>Participated in incident response activities and forensic investigations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Education & Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-6">Academic Background</h3>
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="text-lg font-medium">Master of Science in Cybersecurity</h4>
+                                <span class="bg-red-100 text-red-800 text-sm font-medium px-2 py-0.5 rounded">2013-2015</span>
+                            </div>
+                            <p class="text-gray-700 mb-2">Stanford University</p>
+                            <p class="text-gray-600">Thesis: "Advanced Persistent Threat Detection Using Machine Learning and Behavioral Analysis"</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="text-lg font-medium">Bachelor of Science in Computer Science</h4>
+                                <span class="bg-red-100 text-red-800 text-sm font-medium px-2 py-0.5 rounded">2009-2013</span>
+                            </div>
+                            <p class="text-gray-700 mb-2">University of California, Berkeley</p>
+                            <p class="text-gray-600">Concentration in Network Security and Cryptography. Graduated Summa Cum Laude.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-6">Professional Certifications</h3>
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <h4 class="text-lg font-medium mb-2">Certified Ethical Hacker (CEH)</h4>
+                            <p class="text-gray-700 mb-2">EC-Council</p>
+                            <div class="flex justify-between">
+                                <p class="text-gray-600">Credential ID: CEH2023459</p>
+                                <span class="text-gray-500">2023</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <h4 class="text-lg font-medium mb-2">Certified Information Systems Security Professional (CISSP)</h4>
+                            <p class="text-gray-700 mb-2">(ISC)²</p>
+                            <div class="flex justify-between">
+                                <p class="text-gray-600">Credential ID: CISSP891234</p>
+                                <span class="text-gray-500">2021</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <h4 class="text-lg font-medium mb-2">Offensive Security Certified Professional (OSCP)</h4>
+                            <p class="text-gray-700 mb-2">Offensive Security</p>
+                            <div class="flex justify-between">
+                                <p class="text-gray-600">Credential ID: OSCP67890</p>
+                                <span class="text-gray-500">2020</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <h4 class="text-lg font-medium mb-2">Certified Information Security Manager (CISM)</h4>
+                            <p class="text-gray-700 mb-2">ISACA</p>
+                            <div class="flex justify-between">
+                                <p class="text-gray-600">Credential ID: CISM123456</p>
+                                <span class="text-gray-500">2019</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Get In Touch</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="h-16 w-16 rounded-full bg-red-100 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-envelope text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Email</h3>
+                    <p class="text-gray-700">niraj.mahato@cybersec.com</p>
+                    <a href="mailto:niraj.mahato@cybersec.com" class="text-red-600 hover:text-red-800 mt-2 inline-block">Send a message</a>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="h-16 w-16 rounded-full bg-red-100 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-phone text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Phone</h3>
+                    <p class="text-gray-700">(415) 555-8901</p>
+                    <a href="tel:+14155558901" class="text-red-600 hover:text-red-800 mt-2 inline-block">Call me</a>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="h-16 w-16 rounded-full bg-red-100 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-map-marker-alt text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Location</h3>
+                    <p class="text-gray-700">San Francisco, California</p>
+                    <p class="text-red-600 mt-2">Available for remote consulting</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-white p-8 rounded-lg shadow-sm">
+                <h3 class="text-xl font-semibold mb-6 text-center">Send Me a Message</h3>
+                <form>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Your message" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn-primary inline-flex items-center">
+                            <span>Send Message</span>
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-2xl font-bold mb-6 md:mb-0">
+                    <span class="text-red-400">Niraj</span> Mahato
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-300 hover:text-red-400">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-red-400">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-red-400">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-red-400">
+                        <i class="fas fa-shield-alt text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-red-400">
+                        <i class="fab fa-hackerrank text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <hr class="border-gray-700 my-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">©️ 2023 Niraj Mahato. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#about" class="text-gray-400 hover:text-red-400">About</a>
+                    <a href="#projects" class="text-gray-400 hover:text-red-400">Projects</a>
+                    <a href="#contact" class="text-gray-400 hover:text-red-400">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
